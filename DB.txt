@@ -1,0 +1,16 @@
+create database exemplo;
+show databases;
+use exemplo;
+
+CREATE TABLE IF NOT EXISTS clientes(
+id INT PRIMARY KEY,
+nome VARCHAR(50),
+idade INT,
+email VARCHAR(100) UNIQUE
+);
+
+CREATE TABLE alunos(
+matricula INT PRIMARY KEY,
+nome VARCHAR(100),
+data_nascimento DATE
+);
