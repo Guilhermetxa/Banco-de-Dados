@@ -1,0 +1,83 @@
+create database exemplo;
+show databases;
+use exemplo;
+
+CREATE TABLE IF NOT EXISTS clientes(
+id INT PRIMARY KEY,
+nome VARCHAR(50),
+idade INT,
+email VARCHAR(100) UNIQUE
+);
+
+CREATE TABLE alunos(
+matricula INT PRIMARY KEY,
+nome VARCHAR(100),
+data_nascimento DATE
+);
+
+CREATE TABLE canteiro(
+canteiroID INT PRIMARY KEY,
+nome CHAR(20),
+luzdiaria DOUBLE,
+aguadiaria DOUBLE
+);
+
+CREATE TABLE colhido(
+colhidoID INT PRIMARY KEY,
+plantaID INT,
+funcID INT,
+canteiroID INT,
+data_colhido DATE,
+quantidade INT,
+peso DOUBLE(4,3)
+);
+
+
+
+CREATE TABLE funcionario(
+funcID INT PRIMARY KEY,
+nome CHAR(80),
+idade INT
+);
+
+CREATE TABLE plantio(
+plantioID INT PRIMARY KEY,
+plantaID INT,
+funcID INT,
+canteiroID INT,
+data_plantio DATE,
+sementes INT
+);
+
+CREATE TABLE planta(
+ID INT PRIMARY KEY,
+nome CHAR(20),
+luzdiaria DOUBLE(4,3),
+agua DOUBLE(4,3),
+planta DOUBLE(4,3)
+);
+
+
+
+
+
+
+CREATE DATABASE FAZENDA;
+USE FAZENDA;
+
+CREATE TABLE IF NOT EXISTS CANTEIRO(
+CANTEIROID INT,
+NOME VARCHAR(25),
+LUZDIARIA DECIMAL(4,3),
+AGUADIARIA DECIMAL(4,3),
+PRIMARY KEY(CANTEIROID)
+);
+
+CREATE TABLE IF NOT EXISTS FUNCIONARIO(
+FUNID INT,
+NOME VARCHAR(50),
+IDADE INT,
+PRIMARY KEY(FUNCID)
+);
+
+DROP DATABASE FAZENDA;
